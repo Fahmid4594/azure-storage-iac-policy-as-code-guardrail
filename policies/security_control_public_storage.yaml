@@ -1,0 +1,15 @@
+metadata:
+ name: "Azure Storage Accounts blocks public nested items"
+ id: "CKV_CUSTOM_1"
+ category: "GENERAL_SECURITY"
+
+definition:
+   cond_type: "attribute"
+   resource_types: 
+     - "azurerm_storage_account"
+   attribute: "allow_nested_items_to_be_public"
+   operator: "equals"
+   value: false
+
+
+      
