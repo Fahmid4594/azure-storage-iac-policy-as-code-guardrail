@@ -1,0 +1,14 @@
+on:
+  push:
+    branches: 
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  checkov-scan:
+    runs-on: ubuntu-latest
+
+  
+  
