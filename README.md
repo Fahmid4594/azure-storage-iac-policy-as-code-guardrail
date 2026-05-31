@@ -24,12 +24,14 @@ To validate the guardrail, I tested both an insecure configuration (to trigger t
 ### 1. Detection: The Insecure Infrastructure
 I deliberately attempted to deploy an Azure Storage Account (`insecure/main.tf`) configured with critical vulnerabilities, notably configuring it to allow nested blob containers to be made public, thereby increasing the risk of accidental public data exposure.
 * **Result:** The GitHub Actions pipeline intercepted the PR, identified security policy violations, and failed the workflow.
-![Pipeline Failure](./images/pipeline-failure.png)
+<img width="1771" height="830" alt="Image" src="https://github.com/user-attachments/assets/97121559-943f-4c0b-a031-26d5fdbe7fe1" />
+<img width="1656" height="939" alt="Image" src="https://github.com/user-attachments/assets/194822fe-9f63-4363-8cf2-f0a95ae7b1f3" />
 
 ### 2. Remediation: The Secure Infrastructure
 I deployed a secondary Terraform file (`secure/main.tf`) with corrected configurations, including enforced TLS 1.2, forced HTTPS traffic, and disabled nested public items. 
 * **Result:** Checkov successfully validated the secure infrastructure, allowing the pipeline to pass.
-![Checkov Logs](./images/checkov-logs.png)
+<img width="1916" height="946" alt="Image" src="https://github.com/user-attachments/assets/a75805c9-bb1c-4391-9941-09426c4d4443" />
+<img width="1678" height="914" alt="Image" src="https://github.com/user-attachments/assets/b674ce84-60c6-48d2-8646-10467e38c5a6" />
 
 ### 3. Advanced Configuration: Baseline Tuning & Risk Acceptance
 Enterprise scanners often introduce pipeline noise by enforcing rules outside the current organizational scope. To make this pipeline production-ready, I implemented two levels of tuning:
