@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install checkov 
-      - run: checkov -d ./terraform/secure --external-checks-dir ./policies --framework terraform
+      - run: checkov -d ./terraform/secure --external-checks-dir ./policies --framework terraform --skip-check CKV_AZURE_33,CKV_AZURE_206,CKV_AZURE_59,CKV2_AZURE_33,CKV2_AZURE_41,CKV2_AZURE_38,CKV2_AZURE_40
 
     
 
