@@ -10,6 +10,8 @@ definition:
    attribute: "allow_nested_items_to_be_public"
    operator: "equals"
    value: false
+  
+
 
 
       
