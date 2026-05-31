@@ -30,7 +30,7 @@ I deliberately attempted to deploy an Azure Storage Account (`insecure/main.tf`)
 ### 2. Remediation: The Secure Infrastructure
 I deployed a secondary Terraform file (`secure/main.tf`) with corrected configurations, including enforced TLS 1.2, forced HTTPS traffic, and disabled nested public items. 
 * **Result:** Checkov successfully validated the secure infrastructure, allowing the pipeline to pass.
-<img width="604" height="188" alt="Image" src="https://github.com/user-attachments/assets/0ab03066-43bc-4ecb-80cb-19e6bd3a819f" />
+<img width="1916" height="946" alt="Image" src="https://github.com/user-attachments/assets/f78adee3-9759-4de0-a8c3-718ca1056524" />
 <img width="1678" height="914" alt="Image" src="https://github.com/user-attachments/assets/b674ce84-60c6-48d2-8646-10467e38c5a6" />
 
 ### 3. Advanced Configuration: Baseline Tuning & Risk Acceptance
