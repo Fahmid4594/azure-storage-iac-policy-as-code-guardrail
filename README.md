@@ -24,7 +24,7 @@ To validate the guardrail, I tested both an insecure configuration (to trigger t
 ### 1. Detection: The Insecure Infrastructure
 I deliberately attempted to deploy an Azure Storage Account (`insecure/main.tf`) configured with critical vulnerabilities, notably configuring it to allow nested blob containers to be made public, thereby increasing the risk of accidental public data exposure.
 * **Result:** The GitHub Actions pipeline intercepted the PR, identified security policy violations, and failed the workflow.
-<img width="1771" height="830" alt="Image" src="https://github.com/user-attachments/assets/97121559-943f-4c0b-a031-26d5fdbe7fe1" />
+<img width="604" height="188" alt="Image" src="https://github.com/user-attachments/assets/0ab03066-43bc-4ecb-80cb-19e6bd3a819f" />
 <img width="1656" height="939" alt="Image" src="https://github.com/user-attachments/assets/194822fe-9f63-4363-8cf2-f0a95ae7b1f3" />
 
 ### 2. Remediation: The Secure Infrastructure
