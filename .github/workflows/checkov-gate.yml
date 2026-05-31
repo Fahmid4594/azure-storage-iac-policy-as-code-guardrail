@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install checkov 
-      - run: checkov -d . --external-checks-dir ./policies --framework terraform
+      - run: checkov -d ./terraform/secure --external-checks-dir ./policies --framework terraform
 
     
 

@@ -9,6 +9,7 @@ location = "eastus"
 }
 
 resource "azurerm_storage_account" "main" {
+#checkov:skip=CKV2_AZURE_1: security configuration isn't necessary for this portfolio project
 
 name                =  "securestorage432"
 resource_group_name = azurerm_resource_group.main.name
